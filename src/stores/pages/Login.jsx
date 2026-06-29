@@ -45,20 +45,17 @@ const Login = () => {
     const validationErrors = validate();
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) return;
+
     setIsLoading(true);
     setTimeout(() => {
-      if (email === "srinivasmura111@gmail.com" && password === "123456") {
-        localStorage.setItem("isLoggedIn", "true");
-        navigate("/home", { replace: true });
-      } else {
-        setErrors({ form: "Invalid email or password. Please try again." });
-        setIsLoading(false);
-      }
+      // Any valid email + password (6+ chars) can log in
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userEmail", email);
+      navigate("/home", { replace: true });
     }, 800);
   };
-  <style>{`.main-container { background-color: #000; }`}</style>
-  return (
 
+  return (
     <div className="login-page" style={{ marginTop: '-65px' }}>
       <div className="login-card">
 
