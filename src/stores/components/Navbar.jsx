@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from './CartContext'
 import CartPopup from './CartPopup'
+import logo from '../../assets/e-mart-logo.png';
 
 function Navbar() {
   const { totalCount, setPopupOpen } = useCart()
@@ -28,10 +29,15 @@ function Navbar() {
           </svg>
         </button>
 
-        <span className="nav-mobile-brand">E-Mart</span>
+        <span className="nav-mobile-brand">
+          <img src={logo} alt="E-Mart" style={{ height: '62px' }} />
+        </span>
         <span className="nav-mobile-spacer" />
 
         {/* Desktop left links */}
+        <div className="login-logo nav-desktop-logo">
+          <img src={logo} alt="E-Mart" />
+        </div>
         <div className="left-nav">
           <ul>
             <li><Link to="/home">Home</Link></li>

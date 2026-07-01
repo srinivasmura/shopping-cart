@@ -10,21 +10,29 @@ import ContactUs from './stores/pages/ContactUs'
 import Cart from './stores/pages/Cart'
 import Footer from './stores/pages/Footer'
 import Login from './stores/pages/Login'
+import SignUp from './stores/pages/SignUp'
+import ForgotPassword from './stores/pages/ForgotPassword'
+import ResetPassword from './stores/pages/ResetPassword'
 
 const ProtectedRoute = ({ children }) => {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"
   return isLoggedIn ? children : <Navigate to="/login" replace />
 }
 
-/* Hides Navbar and Footer on the login page */
+/* Hides Navbar and Footer on all auth-related pages */
 const Layout = ({ children }) => {
   const { pathname } = useLocation()
-  const isLoginPage = pathname === "/login" || pathname === "/"
+  const isAuthPage =
+    pathname === "/login" ||
+    pathname === "/" ||
+    pathname === "/signup" ||
+    pathname === "/forgot-password" ||
+    pathname === "/reset-password"
   return (
     <div className="main-container">
-      {!isLoginPage && <Navbar />}
+      {!isAuthPage && <Navbar />}
       {children}
-      {!isLoginPage && <Footer />}
+      {!isAuthPage && <Footer />}
     </div>
   )
 }
@@ -37,6 +45,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
 
             <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
             <Route path="/about" element={<ProtectedRoute><AboutUs /></ProtectedRoute>} />
