@@ -42,7 +42,7 @@ input::placeholder {
   background-color: #3B3562;
 
   .left-nav {
-    width: 70%;
+    width: 58%;
     text-align: left;
 
     li a {
@@ -3118,14 +3118,15 @@ select {
 }
 
 .login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
+  width: auto;
+  height: auto;
+  margin: 0;
+
+  img {
+    width: 130px;
+    height: 60px;
+    margin: 3px;
+  }
 }
 
 .login-heading {
@@ -3364,16 +3365,6 @@ select {
   margin-bottom: 28px;
 }
 
-.login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
 
 .login-heading {
   font-size: 22px;
@@ -3808,6 +3799,10 @@ select {
     padding: 12px 16px;
   }
 
+  .nav-desktop-logo {
+    display: none;
+  }
+
   /* Brand name visible on mobile */
   .nav-mobile-brand {
     font-size: 17px;
@@ -3860,16 +3855,6 @@ select {
   margin-bottom: 28px;
 }
 
-.login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
 
 .login-heading {
   font-size: 22px;
@@ -4373,16 +4358,6 @@ select {
   margin-bottom: 28px;
 }
 
-.login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
 
 .login-heading {
   font-size: 22px;
@@ -4910,16 +4885,6 @@ select {
   margin-bottom: 28px;
 }
 
-.login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
 
 .login-heading {
   font-size: 22px;
@@ -5458,16 +5423,6 @@ select {
   margin-bottom: 28px;
 }
 
-.login-logo {
-  width: 46px;
-  height: 46px;
-  background: #202166;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
 
 .login-heading {
   font-size: 22px;
